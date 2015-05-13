@@ -2,4 +2,4 @@
 genweb.chineselanguagebar
 ====================
 
-*Please fill me*
+This package renders a language bar with fixed links for UPC chinese web version. 
