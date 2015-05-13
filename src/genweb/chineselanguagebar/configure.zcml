@@ -1,0 +1,37 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    i18n_domain="genweb.chineselanguagebar">
+
+ 
+    <five:registerPackage package="." initialize=".initialize" />
+    <grok:grok package=".browser" />
+    <includeDependencies package="." />
+    <include package="grokcore.component" file="meta.zcml" />
+    
+    <i18n:registerTranslations directory="locales" />
+
+    <include package=".browser" />
+
+
+    <include package="grokcore.component" file="meta.zcml" />
+    <genericsetup:registerProfile
+        name="default"
+        title="genweb chineselanguagebar"
+        directory="profiles/default"
+        description="Installs the genweb.chineselanguagebar add-on."
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <genericsetup:importStep
+        name="genweb.chineselanguagebar-postInstall"
+        title="genweb chineselanguagebar post_install import step"
+        description="Post install import step from genweb.chineselanguagebar"
+        handler=".setuphandlers.post_install">
+    </genericsetup:importStep>
+
+</configure>

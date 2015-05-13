@@ -1,0 +1,17 @@
+img.quadradet {
+  width: 5px !important; 
+  height: 6px !important; 
+  background: #007dcc !important;
+  vertical-align:middle !important;
+  border:1px;
+  border-color: #007dcc ;
+}
+
+.barra_idiomes {
+  float: right;
+  position:relative;
+  z-index: 2;
+  margin: -20px 0 0 -125px;
+  font-size: 84.6153846%; 
+  padding-right: 110px;
+}

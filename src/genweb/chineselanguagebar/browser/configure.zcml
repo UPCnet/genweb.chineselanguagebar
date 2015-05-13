@@ -1,0 +1,16 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="genweb.chineselanguagebar">
+
+    <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  
+
+    <!-- Publish static files -->
+    <browser:resourceDirectory
+        name="genweb.chineselanguagebar"
+        directory="static" 
+        layer="genweb.chineselanguagebar.interfaces.IGenwebChineselanguagebarLayer"/>
+  
+</configure>

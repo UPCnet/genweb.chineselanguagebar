@@ -1,0 +1,16 @@
+<div class="barra_idiomes"> 
+      <a lang="zh" title="Català" 
+                             href="http://www.upc.edu?set_language=ca"
+                             hreflang="ca">Català</a>
+      <img class="quadradet" ></img>
+
+      <a lang="zh" title="Español" 
+                             href="http://www.upc.edu?set_language=es"
+                             hreflang="es">Español</a>
+
+      <img class="quadradet" ></img>
+
+      <a lang="zh" title="English" 
+                             href="http://www.upc.edu?set_language=en"
+                             hreflang="en">English</a>                          
+</div>

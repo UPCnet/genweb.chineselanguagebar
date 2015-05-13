@@ -1,0 +1,3 @@
+graft src/genweb
+graft docs/
+include *.cfg *.rst *.in
