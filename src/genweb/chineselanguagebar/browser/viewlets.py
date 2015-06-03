@@ -27,7 +27,6 @@ from Products.CMFPlone.interfaces import IPloneSiteRoot
 from plone.app.layout.viewlets.common import PersonalBarViewlet, GlobalSectionsViewlet, PathBarViewlet
 from plone.app.layout.viewlets.common import SearchBoxViewlet, TitleViewlet, ManagePortletsFallbackViewlet
 from plone.app.layout.viewlets.interfaces import IHtmlHead, IPortalTop, IPortalHeader, IBelowContent
-from plone.app.layout.viewlets.interfaces import IPortalFooter, IAboveContentTitle, IBelowContentTitle
 from plone.app.layout.navigation.interfaces import INavigationRoot
 
 from genweb.core import _
@@ -39,11 +38,11 @@ from genweb.core.utils import havePermissionAtRoot
 from genweb.core.utils import pref_lang
 from genweb.chineselanguagebar.interfaces import IGenwebChineselanguagebarLayer
 
-grok.context(Interface)
 
 
 class viewletBase(grok.Viewlet):
     grok.baseclass()
+    grok.context(Interface)
 
     @memoize_contextless
     def root_url(self):
@@ -62,10 +61,49 @@ class viewletBase(grok.Viewlet):
         lt = getToolByName(self.portal(), 'portal_languages')
         return lt.getPreferredLanguage()
 
-
-class gwChineseLanguageBarViewlet(viewletBase):
-    grok.name('genweb.chineselanguagebar')
+class gwHeader(viewletBase):
+    grok.name('genweb.chineseheader')
+    grok.template('header')
     grok.viewletmanager(IPortalHeader)
     grok.layer(IGenwebChineselanguagebarLayer)
 
-    render = ViewPageTemplateFile('viewlets_templates/chinese_language_bar.pt')
+    def get_image_class(self):
+        if self.genweb_config().treu_menu_horitzontal:
+            # Is a L2 type
+            return 'l2-image'
+        else:
+            return 'l3-image'
+
+    def show_login(self):
+        isAnon = getMultiAdapter((self.context, self.request), name='plone_portal_state').anonymous()
+        return not self.genweb_config().amaga_identificacio and isAnon
+
+    # def show_directory(self):
+    #     return self.genweb_config().directori_upc
+
+    def show_directory(self):
+        show_general = self.genweb_config().directori_upc
+        return show_general
+
+    def show_directory_filtered(self):
+        show_filtered = self.genweb_config().directori_filtrat
+        return show_filtered
+
+    def getURLDirectori(self, codi):
+        if codi:
+            return "http://directori.upc.edu/directori/dadesUE.jsp?id=%s" % codi
+        else:
+            return "http://directori.upc.edu"
+
+    def get_title(self):
+        title = getattr(self.genweb_config(), 'html_title_{}'.format(self.pref_lang()))
+        if title:
+            return title
+        else:
+            return u''
+
+    def is_logo_enabled(self):
+        return self.genweb_config().right_logo_enabled
+
+    def get_right_logo_alt(self):
+        return self.genweb_config().right_logo_alt

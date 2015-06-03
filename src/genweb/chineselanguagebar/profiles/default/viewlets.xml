@@ -9,7 +9,7 @@
   <order manager="plone.portalheader" skinname="GenwebChineselanguagebarLayer">
     <viewlet name="plone.skip_links"/>
     <viewlet name="genweb.header"/>
-     <viewlet name="genweb.chineselanguagebar"/>
+    <viewlet name="genweb.chineselanguagebar"/>
   </order>
   <order manager="plone.portalfooter" skinname="GenwebChineselanguagebarLayer">
     <viewlet name="genweb.logosfooter"/>

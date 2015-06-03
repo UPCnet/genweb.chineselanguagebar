@@ -1,16 +1,29 @@
-<div class="barra_idiomes"> 
-      <a lang="zh" title="Català" 
+<tal:language tal:condition="view/available">
+  <li class="dropdown" id="portal-languageselector">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <i class="icon-globe"></i>
+        Chinese
+        <b class="caret"></b>
+      </a>
+    
+  <ul class="dropdown-menu pull-right adjust-langs">
+    <li class="language-ca">
+      <a  title="Català" 
                              href="http://www.upc.edu?set_language=ca"
                              hreflang="ca">Català</a>
-      <img class="quadradet" ></img>
-
-      <a lang="zh" title="Español" 
+    </li>
+    <li class="language-es">
+      <a  title="Español" 
                              href="http://www.upc.edu?set_language=es"
                              hreflang="es">Español</a>
-
-      <img class="quadradet" ></img>
-
-      <a lang="zh" title="English" 
+    </li>
+    <li class="language-en">
+      <a  title="English" 
                              href="http://www.upc.edu?set_language=en"
-                             hreflang="en">English</a>                          
-</div>
+                             hreflang="en">English</a>      
+    </li>
+  </ul> 
+  </li>                  
+</tal:language>
+
+
