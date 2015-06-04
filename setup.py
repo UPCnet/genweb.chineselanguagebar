@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 """Installer for the genweb.chineselanguagebar package."""
 
+version = '0.1'
+
 from setuptools import find_packages
 from setuptools import setup
 
@@ -19,7 +21,7 @@ long_description = (
 
 setup(
     name='genweb.chineselanguagebar',
-    version='0.1',
+    version=version,
     description="An add-on for Plone",
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers

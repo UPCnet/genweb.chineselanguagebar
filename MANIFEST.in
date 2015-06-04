@@ -1,3 +1,4 @@
-graft src/genweb
-graft docs/
-include *.cfg *.rst *.in
+recursive-include genweb *
+recursive-include docs *
+include *
+global-exclude *.pyc
