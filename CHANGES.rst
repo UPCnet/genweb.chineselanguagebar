@@ -2,11 +2,10 @@ Changelog
 =========
 
 
-0.2 (unreleased)
+0.2 (2015-06-08)
 ----------------
 
-- Nothing changed yet.
-
+* added index server [hanirok]
 
 0.1 (2015-06-04)
 ----------------

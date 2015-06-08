@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Installer for the genweb.chineselanguagebar package."""
 
-version = '0.2.dev0'
+version = '0.2'
 
 from setuptools import find_packages
 from setuptools import setup
