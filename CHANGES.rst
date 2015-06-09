@@ -2,11 +2,12 @@ Changelog
 =========
 
 
-0.3 (unreleased)
+0.3 (2015-06-09)
 ----------------
 
-- Nothing changed yet.
-
+* Header update [hanirok]
+* header updated [Helena Orihuela]
+* header updated [Helena Orihuela]
 
 0.2 (2015-06-08)
 ----------------
