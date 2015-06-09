@@ -147,9 +147,7 @@
                i18n:translate="identificat">
                Identifica't
             </a></li>
-        <tal:block replace="structure provider:genweb.pamls" />
-        <li class="divider"> </li>
-         <li class="dropdown" id="portal-languageselector">
+           <li class="dropdown" id="portal-languageselector">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
         <i class="icon-globe"></i>
         中文
@@ -173,7 +171,10 @@
                              hreflang="en">English</a>      
     </li>
   </ul> 
-  </li>        
+  </li>   
+        <tal:block replace="structure provider:genweb.pamls" />
+        <li class="divider"> </li>
+
       </ul>
     </div>
 
