@@ -26,13 +26,13 @@
                i18n:translate="Contact"
                tal:attributes="href string:${viewlet/root_url}/${viewlet/pref_lang}/contact">
                Contact
-             </a></li>            
+             </a></li>
         <li tal:condition="viewlet/show_directory"
             tal:define="filtered viewlet/show_directory_filtered">
           <tal:codi tal:condition="dades">
             <tal:block tal:condition="filtered"
                        tal:define="codi_upc dades/codi_upc">
-              <a tal:attributes="href python:viewlet.getURLDirectori(codi_upc)" target="_blank" 
+              <a tal:attributes="href python:viewlet.getURLDirectori(codi_upc)" target="_blank"
                 i18n:domain="genweb"
                 i18n:translate="label_dir_upc">
                   Directori UPC
@@ -67,26 +67,26 @@
         中文
         <b class="caret"></b>
       </a>
-    
+
   <ul class="dropdown-menu pull-right adjust-langs">
     <li class="language-ca">
-      <a  title="Català" 
+      <a  title="Català"
                              href="http://www.upc.edu?set_language=ca"
                              hreflang="ca">Català</a>
     </li>
     <li class="language-es">
-      <a  title="Español" 
+      <a  title="Español"
                              href="http://www.upc.edu?set_language=es"
                              hreflang="es">Español</a>
     </li>
     <li class="language-en">
-      <a  title="English" 
+      <a  title="English"
                              href="http://www.upc.edu?set_language=en"
-                             hreflang="en">English</a>      
+                             hreflang="en">English</a>
     </li>
-  </ul> 
-  </li>      
-        <tal:block replace="structure provider:genweb.pamls" />
+  </ul>
+  </li>
+<!--         <tal:block replace="structure provider:genweb.pamls" /> -->
         <li class="divider"> </li>
         <li>
           <tal:block replace="structure provider:genweb.search_manager" />
@@ -112,13 +112,13 @@
                i18n:translate="Contact"
                tal:attributes="href string:${viewlet/root_url}/${viewlet/pref_lang}/contact">
                Contact
-             </a></li>          
+             </a></li>
         <li tal:condition="viewlet/show_directory"
             tal:define="filtered viewlet/show_directory_filtered">
           <tal:codi tal:condition="dades">
             <tal:block tal:condition="filtered"
                        tal:define="codi_upc dades/codi_upc">
-              <a tal:attributes="href python:viewlet.getURLDirectori(codi_upc)" target="_blank" 
+              <a tal:attributes="href python:viewlet.getURLDirectori(codi_upc)" target="_blank"
                 i18n:domain="genweb"
                 i18n:translate="label_dir_upc">
                   Directori UPC
@@ -153,26 +153,26 @@
         中文
         <b class="caret"></b>
       </a>
-    
+
   <ul class="dropdown-menu pull-right adjust-langs">
     <li class="language-ca">
-      <a  title="Català" 
+      <a  title="Català"
                              href="http://www.upc.edu?set_language=ca"
                              hreflang="ca">Català</a>
     </li>
     <li class="language-es">
-      <a  title="Español" 
+      <a  title="Español"
                              href="http://www.upc.edu?set_language=es"
                              hreflang="es">Español</a>
     </li>
     <li class="language-en">
-      <a  title="English" 
+      <a  title="English"
                              href="http://www.upc.edu?set_language=en"
-                             hreflang="en">English</a>      
+                             hreflang="en">English</a>
     </li>
-  </ul> 
-  </li>   
-        <tal:block replace="structure provider:genweb.pamls" />
+  </ul>
+  </li>
+<!--         <tal:block replace="structure provider:genweb.pamls" /> -->
         <li class="divider"> </li>
 
       </ul>
