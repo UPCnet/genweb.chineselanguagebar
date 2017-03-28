@@ -106,4 +106,5 @@ class gwHeader(viewletBase):
         return self.genweb_config().right_logo_enabled
 
     def get_right_logo_alt(self):
-        return self.genweb_config().right_logo_alt
+        right_logo_alt = self.genweb_config().right_logo_alt
+        return right_logo_alt if right_logo_alt else ""
